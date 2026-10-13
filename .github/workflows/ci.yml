@@ -1,3 +1,4 @@
+
 name: ci
 on: [push, pull_request]
 jobs:
@@ -8,5 +9,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install -r 01-reviewlab-ai-code-reviewer/backend/requirements.txt
-      - run: cd 01-reviewlab-ai-code-reviewer/backend && pytest -q
+      - run: pip install -r backend/requirements.txt
+      - run: cd backend && pytest -q
